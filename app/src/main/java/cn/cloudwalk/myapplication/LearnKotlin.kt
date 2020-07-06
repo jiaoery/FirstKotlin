@@ -11,17 +11,6 @@ import kotlin.math.max
  * @version V1.0.0
  * @since JDK 1.8
  */
-//fun main() {
-//    println("Hello World")
-//
-////    变量
-//    var a = 10
-//    println("a = $a")
-//    a *= 10
-//    println("a = $a")
-//
-//
-//}
 
 /**
  * kotlin中函数
@@ -150,10 +139,25 @@ fun forwhile() {
 
 
 fun main() {
+    println("Hello World")
+
+//    变量
+    var a = 10
+    println("a = $a")
+    a *= 10
+    println("a = $a")
     val num = 10
     checkNumber(num)
     val num1 = 10L
     checkNumber(num1)
     forwhile()
+    /**实例化对象无需写new**/
+    val p = Person()
+    p.name = "Jack"
+    p.age = 19
+    p.eat()
+
+    val student = Student("snow",12)
+    val student1 =Student1("aa",5,"jack",19)
 
 }
