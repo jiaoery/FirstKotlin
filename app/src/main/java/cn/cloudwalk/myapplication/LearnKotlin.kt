@@ -163,4 +163,14 @@ fun main() {
     val student1 =Student1("aa",5,"jack",19)
     student1.doHomework()
 
+    val cellphone1 = Cellphone("Samsung",1299.99)
+    val cellphone2 = Cellphone("Samsung",1299.99)
+    println(cellphone1)
+    println("cellphone1 equals cellphone2 " + (cellphone1 == cellphone2))
+
+    //单例模式对比java和kotlin
+    SingletonJava.getInstance().singletonTest()
+    SigntonKotlin.singletonTest()
+
+
 }
