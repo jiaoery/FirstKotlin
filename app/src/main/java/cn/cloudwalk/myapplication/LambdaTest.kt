@@ -9,7 +9,46 @@ package cn.cloudwalk.myapplication
  * @version V1.0.0
  * @since JDK 1.8
  */
-class LambdaTest {
+object  LambdaTest {
+
+    fun lambda(){
+        val list  = mutableListOf("Apple","Banana","Orange","Pear","Grape")
+        list.add("Watermelon")
+        /**lambda表达式**/
+        val lambda = {fruit:String -> fruit.length}
+        val maxLengthFruit = list.maxBy(lambda)
+        println("maxlength fruit is $maxLengthFruit")
+        /**优化表达式1；直接传递lambda表达式**/
+        val maxLengthFruit1 = list.maxBy({fruit:String ->fruit.length})
+        /**当只有一个表达式，可以放在外面**/
+        val maxLengthFruit2 = list.maxBy(){fruit:String ->fruit.length}
+        /**参数不需要指定参数类型**/
+        val maxLengthFruit3 = list.maxBy{fruit->fruit.length}
+        /**参数只有一个，可以用it代替**/
+        val maxLengthFruit4 = list.maxBy{it.length}
+    }
+
+    /**
+     * 小写转大写
+     */
+    fun upperCase(){
+        val list = listOf("Apple","Orange","Pear","Grape","Watermelon")
+        val newlist = list.map { it.toUpperCase() }
+        for (fruit in newlist){
+            println(fruit)
+        }
+    }
+
+    /**
+     * 增加筛选条件
+     */
+    fun filterUpperCase(){
+        val list = listOf("Apple","Orange","Pear","Grape","Watermelon")
+        val newlist = list.filter {it.length>5 }.map { it.toUpperCase() }
+        for (fruit in newlist){
+            println(fruit)
+        }
+    }
 
 }
 
@@ -42,6 +81,12 @@ fun main() {
     for ((fruit,number) in map){
         println("fruit is "+ fruit+". number is "+number)
     }
+
+    LambdaTest.lambda()
+
+    LambdaTest.upperCase()
+
+    LambdaTest.filterUpperCase()
 
 
 

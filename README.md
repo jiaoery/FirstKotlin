@@ -14,9 +14,9 @@ Learn Kotlin for Android
 * 数据类和单例类
 ## Lambda编程
 * 集合创建和遍历
-具体参考类[LambdaTest](https://github.com/jiaoery/FirstKotlin/blob/master/app/src/main/java/cn/cloudwalk/myapplication/LambdaTest.kt)
+>具体参考类[LambdaTest](https://github.com/jiaoery/FirstKotlin/blob/master/app/src/main/java/cn/cloudwalk/myapplication/LambdaTest.kt)
 * 集合的函数式API
-    Lambda表达式的语法结构：{参数名1：参数类型，参数名2：参数类型 ->函数体}
+>Lambda表达式的语法结构：{参数名1：参数类型，参数名2：参数类型 ->函数体}
 ## 空指针检测（Kotlin特色）
 ## kotlin神奇工具
 * 字符串内嵌表达式
