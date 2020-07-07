@@ -32,4 +32,4 @@ println("max length fruit is $maxlengthFruit")
 ```
 * 函数的参数默认值
 参考[MethodDefaultParam](https://github.com/jiaoery/FirstKotlin/blob/master/app/src/main/java/cn/cloudwalk/myapplication/MethodDefaultParam.kt)
-MethodDefaultParam
+
