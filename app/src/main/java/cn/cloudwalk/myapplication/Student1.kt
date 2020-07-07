@@ -9,5 +9,18 @@ package cn.cloudwalk.myapplication
  * @version V1.0.0
  * @since JDK 1.8
  */
-public class Student1(val sno:String,val grade:Int,name:String,age:Int) : Person1(name,age) {
+public class Student1(val sno:String,val grade:Int,name:String,age:Int) : Person1(name,age),Study {
+
+    constructor(name: String,age: Int):this("",0,name,age){
+
+    }
+
+    constructor():this("",0){
+
+    }
+
+    override fun readBooks() {
+        println(name+" is reading.")
+    }
+
 }

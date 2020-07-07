@@ -1,6 +1,7 @@
 # FirstKotlin
 Learn Kotlin for Android
 # LearnKotlin(常用Kotlin基础语法)
+[LearnKotlin](https://github.com/jiaoery/FirstKotlin/blob/master/app/src/main/java/cn/cloudwalk/myapplication/LearnKotlin.kt)
 ## 变量和函数
 ## 逻辑控制
 * if

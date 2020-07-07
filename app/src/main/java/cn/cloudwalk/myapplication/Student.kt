@@ -9,7 +9,7 @@ package cn.cloudwalk.myapplication
  * @version V1.0.0
  * @since JDK 1.8
  */
-class Student(val sno:String,val grade:Int):Person() {
+class Student(val sno:String,val grade:Int):Person(),Study {
     /**
      * 这里构造方式类似java中
      * public Student(String sno ,String grade){
@@ -21,6 +21,14 @@ class Student(val sno:String,val grade:Int):Person() {
     init {
         println("sno is " + sno)
         println("grade is " + grade)
+    }
+
+    override fun readBooks() {
+        println(name+" is reading.")
+    }
+
+    override fun doHomework() {
+        println(name+" is doing homework.")
     }
 
 

@@ -158,6 +158,9 @@ fun main() {
     p.eat()
 
     val student = Student("snow",12)
+    student.readBooks()
+    student.doHomework()
     val student1 =Student1("aa",5,"jack",19)
+    student1.doHomework()
 
 }
