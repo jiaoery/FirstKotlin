@@ -10,10 +10,13 @@ package cn.cloudwalk.myapplication;
  * @since JDK 1.8
  */
 public class SingletonJava {
-    private static final SingletonJava ourInstance = new SingletonJava();
+    private static SingletonJava instance;
 
     public static SingletonJava getInstance() {
-        return ourInstance;
+        if(instance==null){
+           instance =new SingletonJava();
+        }
+        return instance;
     }
 
     private SingletonJava() {

@@ -28,10 +28,35 @@ object NullCheck {
             study.doHomework()
         }
     }
+
+    fun doStudyLNullCheck(study: Study){
+        study?.readBooks()
+        study?.doHomework()
+    }
+
+    fun getTextLength(text:String?):Int{
+        if(text!=null){
+            return text.length
+        }
+        return 0;
+    }
+
+    fun getTextLength1(text: String?) = text?.length?:0
 }
 
 fun main() {
     /**kotlin本身具备非空判定的能力**/
 //    NullCheck.doStudy(null)
     NullCheck.doNullStudy(null)
+    val a =100
+    val b = 200
+    val c = if (a!=null){
+        a
+    }else{
+        b
+    }
+
+    val d = a?:b
+
+
 }
