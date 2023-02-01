@@ -9,7 +9,7 @@ package cn.cloudwalk.myapplication
  * @version V1.0.0
  * @since JDK 1.8
  */
-open class Person {
+open class  Person {
     //姓名
     var name = ""
     //性别

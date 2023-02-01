@@ -157,14 +157,14 @@ fun main() {
     p.age = 19
     p.eat()
 
-    val student = Student("snow",12)
+    val student = Student("snow", 12)
     student.readBooks()
     student.doHomework()
-    val student1 =Student1("aa",5,"jack",19)
+    val student1 = Student1("aa", 5, "jack", 19)
     student1.doHomework()
 
-    val cellphone1 = Cellphone("Samsung",1299.99)
-    val cellphone2 = Cellphone("Samsung",1299.99)
+    val cellphone1 = Cellphone("Samsung", 1299.99)
+    val cellphone2 = Cellphone("Samsung", 1299.99)
     println(cellphone1)
     println("cellphone1 equals cellphone2 " + (cellphone1 == cellphone2))
 
@@ -172,5 +172,35 @@ fun main() {
     SingletonJava.getInstance().singletonTest()
     SigntonKotlin.singletonTest()
 
+    //with run apply 函数使用
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape")
+    val result = with(StringBuilder()) {
+        append("Start eating fruits.\n")
+        for (fruit in list) {
+            append("$fruit \n")
+        }
+        append("Ate all fruit")
+        toString()
+    }
+    println(result)
 
+    val result1 = StringBuilder().run {
+        append("Start eating fruits.\n")
+        for (fruit in list) {
+            append("$fruit \n")
+        }
+        append("Ate all fruit")
+        toString()
+    }
+    println(result1)
+
+    //apply 不带返回参数
+    val result2 = StringBuilder().apply {
+        append("Start eating fruits.\n")
+        for (fruit in list) {
+            append("$fruit \n")
+        }
+        append("Ate all fruit")
+    }
+    println(result2.toString())
 }
