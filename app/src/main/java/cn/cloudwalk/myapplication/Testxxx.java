@@ -12,11 +12,13 @@ package cn.cloudwalk.myapplication;
  */
 public class Testxxx {
 
+
     public static void main(String[] args) {
         String namas = "学习";
         char[] chars =namas.toCharArray();
         for (char cha:chars){
             System.out.println(cha);
         }
+
     }
 }
