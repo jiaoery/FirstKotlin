@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
@@ -8,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "cn.cloudwalk.myapplication"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -28,12 +27,16 @@ android {
                 srcDirs 'src\\main\\java', 'src\\main\\kotlin'
             }
         }
-        test{
+        test {
             java {
                 srcDirs 'src\\test\\java', 'src\\test\\kotlin'
             }
         }
     }
+    buildFeatures {
+        viewBinding true
+    }
+
 
 }
 
