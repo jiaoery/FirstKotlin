@@ -16,16 +16,16 @@ object  LambdaTest {
         list.add("Watermelon")
         /**lambda表达式**/
         val lambda = {fruit:String -> fruit.length}
-        val maxLengthFruit = list.maxBy(lambda)
+        val maxLengthFruit = list.maxByOrNull(lambda)
         println("maxlength fruit is $maxLengthFruit")
         /**优化表达式1；直接传递lambda表达式**/
-        val maxLengthFruit1 = list.maxBy({fruit:String ->fruit.length})
+        val maxLengthFruit1 = list.maxByOrNull({fruit:String ->fruit.length})
         /**当只有一个表达式，可以放在外面**/
-        val maxLengthFruit2 = list.maxBy(){fruit:String ->fruit.length}
+        val maxLengthFruit2 = list.maxByOrNull(){fruit:String ->fruit.length}
         /**参数不需要指定参数类型**/
-        val maxLengthFruit3 = list.maxBy{fruit->fruit.length}
+        val maxLengthFruit3 = list.maxByOrNull{fruit->fruit.length}
         /**参数只有一个，可以用it代替**/
-        val maxLengthFruit4 = list.maxBy{it.length}
+        val maxLengthFruit4 = list.maxByOrNull{it.length}
     }
 
     /**
@@ -66,7 +66,7 @@ fun main() {
     for (fruit in list1){
         println(fruit)
     }
-    val maxlengthFruit = list.maxBy { it.length }
+    val maxlengthFruit = list.maxByOrNull { it.length }
     println("max length fruit is "+maxlengthFruit)
 
     /**map构建**/

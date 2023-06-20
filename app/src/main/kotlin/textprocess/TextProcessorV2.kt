@@ -46,17 +46,3 @@ private fun <T> Map<String, Int>.mapToList(transform: (Map.Entry<String, Int>) -
     return list
 }
 
-
-private fun Map<String, Int>.sortByFrequency(): MutableList<WordFreq> {
-    val list = mutableListOf<WordFreq>()
-    for (entry in this) {
-        val freq = WordFreq(entry.key, entry.value)
-        list.add(freq)
-    }
-
-    list.sortByDescending {
-        it.frequency
-    }
-
-    return list
-}
