@@ -8,6 +8,12 @@ package textprocess
  * @version 1.1.0
  * @date 2023/5/22 11:37
  */
+
+@Deprecated(
+    message = "Use TextProcessorV4 instead",
+    replaceWith = ReplaceWith("TextProcessorV4"),
+            level = DeprecationLevel.ERROR
+)
 class TextProcessorV1 {
     fun processText(text: String): List<WordFreq> {
         // 步骤1 清理文本中的标点符号

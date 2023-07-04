@@ -1,8 +1,8 @@
 package base3
 
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-import kotlin.test.assertEquals
 
 /**
  * ClassName: TestCalculatorV3<br/>
